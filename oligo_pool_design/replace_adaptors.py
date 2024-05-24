@@ -1,16 +1,16 @@
 import pandas as pd
 
-# def replace_adaptor():
-#     input_csv = input("STR oligo design file: ")
-#     old_adapter = "ACTGGCCGCTTGACG"
-#     lenti_adapter = "AGGACCGGATCAACT"
+def replace_adaptor():
+    input_csv = input("STR oligo design file: ")
+    old_adapter = "ACTGGCCGCTTGACG"
+    lenti_adapter = "AGGACCGGATCAACT"
 
-    # text = open(input_csv, "r")
-    # text = ''.join([i for i in text]) \
-    #     .replace(old_adapter, lenti_adapter)
-    # x = open("output.csv","w")
-    # x.writelines(text)
-    # x.close()
+    text = open(input_csv, "r")
+    text = ''.join([i for i in text]) \
+        .replace(old_adapter, lenti_adapter)
+    x = open("output.csv","w")
+    x.writelines(text)
+    x.close()
 
 def split_adaptor():
     old_adapter = "ACTGGCCGCTTGACG"
@@ -32,7 +32,7 @@ def split_adaptor():
     df.to_csv("split.csv")
 
 def main():
-    # replace_adaptor()
+    replace_adaptor()
     split_adaptor()
 
 if __name__=="__main__": 
